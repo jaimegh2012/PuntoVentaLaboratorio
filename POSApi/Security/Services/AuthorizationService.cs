@@ -75,7 +75,7 @@ namespace POSApi.Security.Services
             SecurityTokenDescriptor tokenDescriptor = new()
             {
                 Subject = claims,
-                Expires = DateTime.UtcNow.AddSeconds(30),
+                Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = credencialesToken
             };
 
@@ -106,7 +106,7 @@ namespace POSApi.Security.Services
                 Token = token,
                 RefreshToken = refreshToken,
                 FechaCreacion = DateTime.UtcNow,
-                FechaExpiracion = DateTime.UtcNow.AddMinutes(1),
+                FechaExpiracion = DateTime.UtcNow.AddDays(5),
 
             };
 
