@@ -19,7 +19,7 @@ namespace POSApi.Controllers.Clientes
 
         //GET: Obtener la lista de todas las direcciones de un cliente
         [Authorize]
-        [HttpGet("CodCliente")]
+        [HttpGet("Cliente/{CodCliente}")]
         public async Task<IActionResult> GetDireccionesCliente(int CodCliente)
         {
             try
@@ -46,7 +46,7 @@ namespace POSApi.Controllers.Clientes
 
         //GET: Obtener una direccion por su id
         [Authorize]
-        [HttpGet("CodDireccion")]
+        [HttpGet("{CodDireccion}")]
         public async Task<IActionResult> GetDireccion(int CodDireccion)
         {
             try
@@ -100,7 +100,7 @@ namespace POSApi.Controllers.Clientes
 
         //Put: Actualizar una direccion de cliente
         [Authorize]
-        [HttpPut("CodDireccion")]
+        [HttpPut("{CodDireccion}")]
         public async Task<IActionResult> PutDireccionCliente(int CodDireccion, DireccionDTO data)
         {
             try
@@ -130,7 +130,7 @@ namespace POSApi.Controllers.Clientes
 
         //Delete: Cambiar a estado eliminado una direccion de cliente
         [Authorize]
-        [HttpDelete("CodDireccion")]
+        [HttpDelete("{CodDireccion}")]
         public async Task<IActionResult> DeleteDireccionCliente(int CodDireccion)
         {
             try

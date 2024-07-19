@@ -46,7 +46,7 @@ namespace POSApi.Controllers.Clientes
 
         //GET: Obtener un cliente por su id
         [Authorize]
-        [HttpGet("CodCliente")]
+        [HttpGet("{CodCliente}")]
         public async Task<IActionResult> GetCliente(int CodCliente)
         {
             try
@@ -100,7 +100,7 @@ namespace POSApi.Controllers.Clientes
 
         //Put: Actualizar un cliente
         [Authorize]
-        [HttpPut("CodCliente")]
+        [HttpPut("{CodCliente}")]
         public async Task<IActionResult> PutCliente(int CodCliente, ClienteDTO data)
         {
             try
@@ -130,7 +130,7 @@ namespace POSApi.Controllers.Clientes
 
         //Delete: Cambiar a estado eliminado un cliente
         [Authorize]
-        [HttpDelete("CodCliente")]
+        [HttpDelete("{CodCliente}")]
         public async Task<IActionResult> DeleteCliente(int CodCliente)
         {
             try

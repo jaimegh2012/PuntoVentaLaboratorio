@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using POSApi.Controllers.Usuarios.Dtos;
 using POSApi.DB.PuntoVentaEntities;
 using POSApi.Security.AES;
@@ -15,6 +16,33 @@ namespace POSApi.Controllers.Usuarios
         public UsuariosController(PuntoVentaEntities db)
         {
             this._db = db;
+        }
+
+        //GET: Obtener la lista de todos los usuarios
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GetUsuarios()
+        {
+            try
+            {
+                var data = await _db.Usuarios.Where(x => x.Eliminado == false)
+                    .Select(x => new
+                    {
+                        x.CodUsuario,
+                        x.NombreUsuario,
+                        Usuario = x.Usuario1,
+                        x.Activo
+                    })
+                    .ToListAsync();
+
+
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+
         }
 
         [Authorize]
