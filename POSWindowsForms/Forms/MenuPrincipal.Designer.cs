@@ -38,6 +38,7 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +97,8 @@
             // 
             // pedidosToolStripMenuItem
             // 
+            this.pedidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearPedidosToolStripMenuItem});
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
             this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
@@ -121,6 +124,13 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // crearPedidosToolStripMenuItem
+            // 
+            this.crearPedidosToolStripMenuItem.Name = "crearPedidosToolStripMenuItem";
+            this.crearPedidosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearPedidosToolStripMenuItem.Text = "Crear Pedidos";
+            this.crearPedidosToolStripMenuItem.Click += new System.EventHandler(this.crearPedidosToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -154,5 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearPedidosToolStripMenuItem;
     }
 }

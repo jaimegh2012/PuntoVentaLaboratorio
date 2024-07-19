@@ -54,5 +54,12 @@ namespace POSWindowsForms.Forms
             forma.MdiParent = this;
             forma.Show();
         }
+
+        private void crearPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pedidos forma = new Pedidos();
+            forma.MdiParent = this;
+            forma.Show();
+        }
     }
 }
