@@ -9,6 +9,8 @@ public partial class DetallePedido
 
     public int? CodProducto { get; set; }
 
+    public int? CodPedido { get; set; }
+
     public decimal? Precio { get; set; }
 
     public decimal? Cantidad { get; set; }
@@ -18,6 +20,8 @@ public partial class DetallePedido
     public bool? Activo { get; set; }
 
     public bool? Eliminado { get; set; }
+
+    public virtual Pedido? CodPedidoNavigation { get; set; }
 
     public virtual Producto? CodProductoNavigation { get; set; }
 }

@@ -56,7 +56,7 @@ namespace POSApi.Controllers.Pedidos
 
         //GET: Obtener un pedido por su id
         [Authorize]
-        [HttpGet("CodPedido")]
+        [HttpGet("{CodPedido}")]
         public async Task<IActionResult> GetPedido(int CodPedido)
         {
             try
@@ -139,7 +139,7 @@ namespace POSApi.Controllers.Pedidos
 
         //Put: Actualizar un pedido
         [Authorize]
-        [HttpPut("CodPedido")]
+        [HttpPut("{CodPedido}")]
         public async Task<IActionResult> PutPedido(int CodPedido, PedidoDTO data)
         {
             try
@@ -200,7 +200,7 @@ namespace POSApi.Controllers.Pedidos
 
         //Delete: Cambiar a estado eliminado un pedido
         [Authorize]
-        [HttpDelete("CodPedido")]
+        [HttpDelete("{CodPedido}")]
         public async Task<IActionResult> DeletePedido(int CodPedido)
         {
             try

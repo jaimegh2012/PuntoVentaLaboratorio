@@ -60,15 +60,19 @@ public partial class PuntoVentaEntities : DbContext
 
         modelBuilder.Entity<DetallePedido>(entity =>
         {
-            entity.HasKey(e => e.CodDetallePedido).HasName("PK__DetalleP__85E226A5D791F5B8");
+            entity.HasKey(e => e.CodDetallePedido).HasName("PK__DetalleP__85E226A5A5D21E28");
 
             entity.Property(e => e.Cantidad).HasColumnType("decimal(6, 2)");
             entity.Property(e => e.Precio).HasColumnType("decimal(6, 2)");
             entity.Property(e => e.Total).HasColumnType("decimal(6, 2)");
 
+            entity.HasOne(d => d.CodPedidoNavigation).WithMany(p => p.DetallePedidos)
+                .HasForeignKey(d => d.CodPedido)
+                .HasConstraintName("FK__DetallePe__CodPe__6D0D32F4");
+
             entity.HasOne(d => d.CodProductoNavigation).WithMany(p => p.DetallePedidos)
                 .HasForeignKey(d => d.CodProducto)
-                .HasConstraintName("FK__DetallePe__CodPr__5BE2A6F2");
+                .HasConstraintName("FK__DetallePe__CodPr__6C190EBB");
         });
 
         modelBuilder.Entity<DireccionesCliente>(entity =>
@@ -103,17 +107,21 @@ public partial class PuntoVentaEntities : DbContext
 
         modelBuilder.Entity<Pedido>(entity =>
         {
-            entity.HasKey(e => e.CodPedido).HasName("PK__Pedidos__D1AFD997B00C8665");
+            entity.HasKey(e => e.CodPedido).HasName("PK__Pedidos__D1AFD9970D01C0E2");
 
             entity.Property(e => e.Total).HasColumnType("decimal(6, 2)");
 
             entity.HasOne(d => d.CodClienteNavigation).WithMany(p => p.Pedidos)
                 .HasForeignKey(d => d.CodCliente)
-                .HasConstraintName("FK__Pedidos__CodClie__5812160E");
+                .HasConstraintName("FK__Pedidos__CodClie__6754599E");
 
             entity.HasOne(d => d.CodDireccionNavigation).WithMany(p => p.Pedidos)
                 .HasForeignKey(d => d.CodDireccion)
-                .HasConstraintName("FK__Pedidos__CodDire__59063A47");
+                .HasConstraintName("FK__Pedidos__CodDire__68487DD7");
+
+            entity.HasOne(d => d.CodUsuarioNavigation).WithMany(p => p.Pedidos)
+                .HasForeignKey(d => d.CodUsuario)
+                .HasConstraintName("FK__Pedidos__CodUsua__693CA210");
         });
 
         modelBuilder.Entity<Producto>(entity =>

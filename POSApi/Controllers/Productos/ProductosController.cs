@@ -48,7 +48,7 @@ namespace POSApi.Controllers.Productos
 
         //GET: Obtener un producto por su id
         [Authorize]
-        [HttpGet("CodProducto")]
+        [HttpGet("{CodProducto}")]
         public async Task<IActionResult> GetProducto(int CodProducto)
         {
             try
@@ -135,7 +135,7 @@ namespace POSApi.Controllers.Productos
 
         //Delete: Cambiar a estado eliminado un producto
         [Authorize]
-        [HttpDelete("CodProducto")]
+        [HttpDelete("{CodProducto}")]
         public async Task<IActionResult> DeleteProducto(int CodProducto)
         {
             try

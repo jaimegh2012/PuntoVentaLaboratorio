@@ -18,4 +18,6 @@ public partial class Usuario
     public bool? Eliminado { get; set; }
 
     public virtual ICollection<HistorialRefreshToken> HistorialRefreshTokens { get; set; } = new List<HistorialRefreshToken>();
+
+    public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 }
