@@ -92,6 +92,7 @@
             this.direccionesDeClientesToolStripMenuItem.Name = "direccionesDeClientesToolStripMenuItem";
             this.direccionesDeClientesToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.direccionesDeClientesToolStripMenuItem.Text = "Direcciones de Clientes";
+            this.direccionesDeClientesToolStripMenuItem.Click += new System.EventHandler(this.direccionesDeClientesToolStripMenuItem_Click);
             // 
             // pedidosToolStripMenuItem
             // 

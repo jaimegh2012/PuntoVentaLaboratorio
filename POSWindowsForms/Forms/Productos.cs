@@ -116,8 +116,6 @@ namespace POSWindowsForms.Forms
             }
             catch (Exception ex)
             {
-
-                throw;
             }
             
         }

@@ -83,8 +83,10 @@
   <ItemGroup>
     <Compile Include="Datos\CategoriasService.cs" />
     <Compile Include="Datos\ClientesService.cs" />
+    <Compile Include="Datos\DireccionesClienteService.cs" />
     <Compile Include="Datos\DTOS\CategoriaDTO.cs" />
     <Compile Include="Datos\DTOS\ClienteDTO.cs" />
+    <Compile Include="Datos\DTOS\DireccionClienteDTO.cs" />
     <Compile Include="Datos\DTOS\PedidoDTO.cs" />
     <Compile Include="Datos\DTOS\ProductoDTO.cs" />
     <Compile Include="Datos\DTOS\UsuarioDTO.cs" />
@@ -103,6 +105,12 @@
     </Compile>
     <Compile Include="Forms\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DireccionesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DireccionesCliente.Designer.cs">
+      <DependentUpon>DireccionesCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -135,6 +143,9 @@
     <Compile Include="Security\SecurityService.cs" />
     <EmbeddedResource Include="Forms\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DireccionesCliente.resx">
+      <DependentUpon>DireccionesCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

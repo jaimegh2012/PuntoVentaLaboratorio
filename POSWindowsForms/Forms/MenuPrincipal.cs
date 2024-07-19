@@ -47,5 +47,12 @@ namespace POSWindowsForms.Forms
         {
             Application.Exit();
         }
+
+        private void direccionesDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DireccionesCliente forma = new DireccionesCliente();
+            forma.MdiParent = this;
+            forma.Show();
+        }
     }
 }
