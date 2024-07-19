@@ -7,7 +7,7 @@ Este Repositorio cuenta con dos proyectos:
 - Restaurar los paquetes NuGet, dar click derecho sobre la solucion y seleccionar la opcion restaurar los paquetes NuGet.
   
 - Crear la base de datos con todas sus tablas en SQL server managment Studio:
-    - link de scripts ordenados de arriba hacia abajo: !https://mega.nz/file/2QtnFZbS#ubSptdXihBa8DhiwnBNhCtnNcQvxSzjC3RraCXv9RjM
+    - link de scripts ordenados de arriba hacia abajo: https://mega.nz/file/2QtnFZbS#ubSptdXihBa8DhiwnBNhCtnNcQvxSzjC3RraCXv9RjM
  
 - En el archivo appsettings.json, modificar la cadena de conexion "PuntoVentaDb" con los datos de su entorno local:
     - cadena de conexion: Data Source=DESKTOP-LB1UBLV;Initial Catalog=PuntoVenta;user id=sa;password=1234;TrustServerCertificate=true
@@ -51,7 +51,16 @@ Este Repositorio cuenta con dos proyectos:
 * La pantalla principal cuenta con un menu de opciones donde se encuentran los siguientes crud:
   - Crud Productos
   - Crud Clientes
+  - Crud Direccines de Clientes
   - Crud Usuarios
+  * Nota: todos estos crud tienen tres botones:
+      - Guardar: Crea o actualiza un registro.
+      - Limpiar: Limpia los inputs, para crear un nuevo registro;
+      - Salir: Cierra el form
+* Pasos Crear un registro:
+    - si los campos estan llenos, dar click en el boton limpiar y rellenar los campos con los datos del nuevo registro, luego en guardar;
+* Pasos Actualizar un registro:
+    - En el datagridView seleccionar el registro a modificar, luego modificar los campos necesarios, luego guardar.
 
 * La aplicacion hace consumo de la web api creada
     
