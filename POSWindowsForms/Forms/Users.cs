@@ -66,7 +66,7 @@ namespace POSWindowsForms.Forms
         {
             try
             {
-                if (this.txtNombre.Text != "" && this.txtEmail.Text != "" && this.txtClave.Text != "")
+                if (this.txtNombre.Text != "" && this.txtEmail.Text != "" && (CodUsuario.Length > 0 || this.txtClave.Text != ""))
                 {
                     UsuarioDTO data = new UsuarioDTO()
                     {
@@ -102,8 +102,6 @@ namespace POSWindowsForms.Forms
             }
             catch (Exception ex)
             {
-
-                throw;
             }
         }
 
