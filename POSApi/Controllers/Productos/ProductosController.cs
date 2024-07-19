@@ -25,7 +25,7 @@ namespace POSApi.Controllers.Productos
         {
             try
             {
-                var data = _db.Productos.Where(x => x.Eliminado == false)
+                var data = await _db.Productos.Where(x => x.Eliminado == false)
                     .Select(x => new
                     {
                         x.CodProducto,
@@ -34,7 +34,7 @@ namespace POSApi.Controllers.Productos
                         x.CodCategoria,
                         x.Activo
                     })
-                    .ToList();
+                    .ToListAsync();
 
 
                 return Ok(data);
@@ -104,7 +104,7 @@ namespace POSApi.Controllers.Productos
 
         //Put: Actualizar un producto
         [Authorize]
-        [HttpPut("CodProducto")]
+        [HttpPut("{CodProducto}")]
         public async Task<IActionResult> PutProducto(int CodProducto, ProductoDTO data)
         {
             try

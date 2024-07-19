@@ -15,7 +15,7 @@ builder.Services.AddDbContext<PuntoVentaEntities>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PuntoVentaDb"));
 
 
-}, ServiceLifetime.Singleton);
+}, ServiceLifetime.Scoped);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
