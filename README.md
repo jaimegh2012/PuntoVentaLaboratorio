@@ -7,7 +7,7 @@ Este Repositorio cuenta con dos proyectos:
 - Restaurar los paquetes NuGet, dar click derecho sobre la solucion y seleccionar la opcion restaurar los paquetes NuGet.
   
 - Crear la base de datos con todas sus tablas en SQL server managment Studio:
-    - link de scripts ordenados de arriba hacia abajo: https://mega.nz/file/KQckxZbR#ael0CY54ZywTQLp8vwpuHlRWIbGQC5wot62eYA7i3Uc
+    - link de scripts ordenados de arriba hacia abajo: !https://mega.nz/file/2QtnFZbS#ubSptdXihBa8DhiwnBNhCtnNcQvxSzjC3RraCXv9RjM
  
 - En el archivo appsettings.json, modificar la cadena de conexion "PuntoVentaDb" con los datos de su entorno local:
     - cadena de conexion: Data Source=DESKTOP-LB1UBLV;Initial Catalog=PuntoVenta;user id=sa;password=1234;TrustServerCertificate=true
@@ -24,6 +24,8 @@ Este Repositorio cuenta con dos proyectos:
          - user id: su usuario
          - password: su contrasena
       - notaImportante: los paquetes NuGet Microsoft.EntityFrameworkCore.SqlServer y Microsoft.EntityFrameworkCore.Tools  deben de estar instalados para que pueda correr el comando, por eso es importante restaurar los paquetes NuGet en el paso 1.
+      - Nota importante: no debe haber ningun error de depuracion para poder correr el comando, si existe algun error hacer lo siguiente:
+        * comentar las lineas donde estan los errores o excluir del proyecto las carpetas que contienen los archivos con errores y despues cuando ya se haya mapeado la db incluirlas de nuevo en el proyecto. 
     - En la consola de paquetes correr el comando anterior
 
 - Notas:
@@ -39,6 +41,8 @@ Este Repositorio cuenta con dos proyectos:
     * Contraseña: 12345
    
   - Iniciar sesión con las credenciales, si son correctas el api devuelve un objeto en el cual viene un token, dicho token se guarda en una variable (TOKEN) en una clase estatica llamada (Urls). asi que el token permanece en esa variable y se utiliza en todas las peticiones que se hagan a la api, ya que los endpoints estan protegidos y se necesita un token valido para acceder a ellos.
+ 
+  - Nota: la contraseña se envia crifrada, se utiliza el algoritmo AES.
  
 
 
