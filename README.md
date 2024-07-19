@@ -1,9 +1,24 @@
-## PuntoVentaLaboratorio
+### PuntoVentaLaboratorio
 Este Repositorio cuenta con dos proyectos: 
-* Una web api Restful 
+* Una web api Restful
+    - Tecnologias usadas:
+       - .Net 8.0
+       - Lenguaje C#
 * Y una aplicacion de windows form.
+    - Tecnologias usadas:
+      - .Net Framework 4.7.2
+      - Lenguaje C#
+        
+## Herramientas usadas
+* Visual studio 2022
+* SQL Server Managment Studio 20
+  
+## Pasos Generales
+* Clonar el repositorio:
+  - git clone https://github.com/jaimegh2012/PuntoVentaLaboratorio
+* Una vez clonado, abrir el proyecto en Visual Studio 2022
 
-# Pasos a seguir en web api:
+## Pasos a seguir en web api:
 - Restaurar los paquetes NuGet, dar click derecho sobre la solucion y seleccionar la opcion restaurar los paquetes NuGet.
   
 - Crear la base de datos con todas sus tablas en SQL server managment Studio:
