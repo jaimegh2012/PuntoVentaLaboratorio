@@ -41,6 +41,7 @@ namespace POSWindowsForms.Forms
             this.chkActivo.Checked = false;
 
             this.txtNombre.Focus();
+            CodProducto = "";
         }
 
         private async void recargarDataGrid()

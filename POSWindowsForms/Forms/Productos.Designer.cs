@@ -165,7 +165,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(110, 178);
+            this.btnGuardar.Location = new System.Drawing.Point(97, 178);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 39);
             this.btnGuardar.TabIndex = 27;
@@ -175,7 +175,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(561, 178);
+            this.btnSalir.Location = new System.Drawing.Point(506, 178);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 39);
             this.btnSalir.TabIndex = 28;
@@ -185,7 +185,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(398, 178);
+            this.btnLimpiar.Location = new System.Drawing.Point(308, 178);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(86, 39);
             this.btnLimpiar.TabIndex = 29;
@@ -200,6 +200,7 @@
             this.ClientSize = new System.Drawing.Size(728, 453);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Productos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

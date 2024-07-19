@@ -87,13 +87,22 @@
     <Compile Include="Datos\DTOS\ClienteDTO.cs" />
     <Compile Include="Datos\DTOS\PedidoDTO.cs" />
     <Compile Include="Datos\DTOS\ProductoDTO.cs" />
+    <Compile Include="Datos\DTOS\UsuarioDTO.cs" />
     <Compile Include="Datos\ProductosService.cs" />
+    <Compile Include="Datos\UsuariosService.cs" />
+    <Compile Include="Enviroments\Keys.cs" />
     <Compile Include="Enviroments\Urls.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -113,13 +122,31 @@
     <Compile Include="Forms\Productos.Designer.cs">
       <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AES\AES.cs" />
+    <Compile Include="Security\DTOS\SegurityDTO.cs" />
+    <Compile Include="Security\SecurityService.cs" />
+    <EmbeddedResource Include="Forms\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

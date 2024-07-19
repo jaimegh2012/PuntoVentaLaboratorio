@@ -28,5 +28,24 @@ namespace POSWindowsForms.Forms
         {
 
         }
+
+        private void mantenimientoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clientes forma = new Clientes();
+            forma.MdiParent = this;
+            forma.Show();
+        }
+
+        private void mantenimientoUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Users forma = new Users();
+            forma.MdiParent = this;
+            forma.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

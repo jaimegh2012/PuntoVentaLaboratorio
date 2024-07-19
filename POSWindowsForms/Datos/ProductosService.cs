@@ -50,7 +50,6 @@ namespace POSWindowsForms.Datos
             using (HttpClient client = new HttpClient())
             {
                 
-                //var url = $"{Urls.URL_BASE}Productos/{}"  
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Urls.TOKEN);
                 var json = JsonConvert.SerializeObject(data);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
