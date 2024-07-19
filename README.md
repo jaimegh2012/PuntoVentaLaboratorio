@@ -18,6 +18,8 @@ Este Repositorio cuenta con dos proyectos:
   - git clone https://github.com/jaimegh2012/PuntoVentaLaboratorio
 * Una vez clonado, abrir el proyecto en Visual Studio 2022
 
+  Nota: al arrancar los proyectos, arrancar primero el api, luego la applicacion windows form como una nueva instancia.
+
 ## Pasos a seguir en web api:
 - Restaurar los paquetes NuGet, dar click derecho sobre la solucion y seleccionar la opcion restaurar los paquetes NuGet.
   
